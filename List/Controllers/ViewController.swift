@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate {
     
     /// Planet View Model Object
     private var planetsViewModel: PlanetsViewModel!
@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     var items:[Planets] = []
     var tempItems:[Planets] = []
+    
+    var valueToPass: String?
     
     
     /// Tbaleview Datasource object
@@ -59,12 +61,15 @@ class ViewController: UIViewController {
         catch{
             print("some error occured")
         }
-        if(self.tempItems.count == 1) {
+        DispatchQueue.main.async {
             Common().deleteAllData(entity: "Planets")
+        }
+        if(self.tempItems.count == 1) {
             for val in result {
                 print(val)
                 let newArray = NSEntityDescription.insertNewObject(forEntityName: "Planets", into: context)
                 newArray.setValue(val.name, forKey: "name")
+                newArray.setValue(val.population, forKey: "population")
             }
         }
         try! self.context.save()
@@ -92,6 +97,7 @@ class ViewController: UIViewController {
         
         self.dataSource = PlanetTableViewDataSource(cellIdentifier: "PlanetTableViewCell", items: self.items, configureCell: { (cell, evm) in
             cell.planetNameLabel.text = evm.name
+            cell.plPopulation.text = evm.population
         })
         
         DispatchQueue.main.async {

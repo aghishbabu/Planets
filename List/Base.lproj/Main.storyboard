@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,32 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0cW-gd-Fbc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0cW-gd-Fbc">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlanetTableViewCell" rowHeight="70" id="8ub-bS-6pP" customClass="PlanetTableViewCell" customModule="List" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlanetTableViewCell" rowHeight="70" id="8ub-bS-6pP" customClass="PlanetTableViewCell" customModule="List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ub-bS-6pP" id="LAq-ui-Lae">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="778-Mm-SQv">
-                                                    <rect key="frame" x="41" y="23" width="105" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <rect key="frame" x="96" y="10" width="70.5" height="36"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8I-g8-IqJ">
+                                                    <rect key="frame" x="20" y="21" width="46" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeU-Q4-iLa">
+                                                    <rect key="frame" x="20" y="42" width="78" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPF-U8-llJ">
+                                                    <rect key="frame" x="121" y="42" width="27" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="778-Mm-SQv" secondAttribute="trailing" constant="20" symbolic="YES" id="CCO-2U-KhA"/>
-                                                <constraint firstItem="778-Mm-SQv" firstAttribute="leading" secondItem="LAq-ui-Lae" secondAttribute="leading" constant="41" id="IVg-6x-7lg"/>
+                                                <constraint firstItem="q8I-g8-IqJ" firstAttribute="centerY" secondItem="778-Mm-SQv" secondAttribute="centerY" id="Gd9-Eg-fSA"/>
+                                                <constraint firstItem="IeU-Q4-iLa" firstAttribute="top" secondItem="q8I-g8-IqJ" secondAttribute="bottom" constant="7" id="Jmc-fV-Hon"/>
+                                                <constraint firstItem="778-Mm-SQv" firstAttribute="leading" secondItem="q8I-g8-IqJ" secondAttribute="trailing" constant="30" id="PWM-Oi-fpq"/>
+                                                <constraint firstItem="q8I-g8-IqJ" firstAttribute="leading" secondItem="LAq-ui-Lae" secondAttribute="leadingMargin" id="SMS-oK-Zzq"/>
+                                                <constraint firstItem="q8I-g8-IqJ" firstAttribute="top" secondItem="LAq-ui-Lae" secondAttribute="topMargin" constant="10" id="ZoB-wJ-ylJ"/>
+                                                <constraint firstItem="cPF-U8-llJ" firstAttribute="leading" secondItem="IeU-Q4-iLa" secondAttribute="trailing" constant="23" id="Zxa-3d-Ve8"/>
                                                 <constraint firstAttribute="bottom" secondItem="778-Mm-SQv" secondAttribute="bottom" constant="24" id="grJ-Wg-fLb"/>
-                                                <constraint firstItem="778-Mm-SQv" firstAttribute="top" secondItem="LAq-ui-Lae" secondAttribute="top" constant="23" id="nTT-gP-0A6"/>
+                                                <constraint firstItem="778-Mm-SQv" firstAttribute="top" secondItem="LAq-ui-Lae" secondAttribute="top" constant="10" id="nTT-gP-0A6"/>
+                                                <constraint firstItem="cPF-U8-llJ" firstAttribute="centerY" secondItem="IeU-Q4-iLa" secondAttribute="centerY" id="pfe-bW-2iN"/>
+                                                <constraint firstItem="IeU-Q4-iLa" firstAttribute="leading" secondItem="q8I-g8-IqJ" secondAttribute="leading" id="svs-Gb-9O4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="plPopulation" destination="cPF-U8-llJ" id="UgB-Cc-Rqm"/>
                                             <outlet property="planetNameLabel" destination="778-Mm-SQv" id="XRK-JO-Qgl"/>
                                         </connections>
                                     </tableViewCell>
@@ -67,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-232" y="-52"/>
+            <point key="canvasLocation" x="-520" y="-133"/>
         </scene>
     </scenes>
     <resources>

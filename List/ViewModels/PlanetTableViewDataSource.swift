@@ -45,7 +45,7 @@ class PlanetTableViewDataSource<CELL : UITableViewCell,T> : NSObject, UITableVie
         return 1
     }
     
-  
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection
                    section: Int) -> String? {
         return "Planets"
